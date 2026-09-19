@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Menú modo pc*/
+
+.btn_menu {
+  float: left;
+  font-size: 30px;
+  margin: 17px 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  display: none; /*para que no se muestre*/
+}
+
+.btn_menu .txt_btnmenu {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  margin-top: 2px;
+  margin-left: 32px;
+  color: rgb(255, 255, 255);
+}
+
+/*animación boton menu*/
+.contenedormenu {
+  position: absolute;
+  width: 25px;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+
+.linea-1,
+.linea-2,
+.linea-3 {
+  width: 90%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  margin: 0.5px 0px;
+  transition: 0.2s ease-out;
+  border-radius: 15px;
+}
+
+.linea-3 {
+  width: 70%;
+  margin-top: 3px;
+}
+
+.linea-2 {
+  opacity: 0;
+}
+
+.change .linea-1 {
+  transform: rotateZ(-45deg);
+  position: absolute;
+}
+
+.change .linea-3 {
+  width: 90%;
+  margin-top: 0;
+  transform: rotateZ(45deg);
+  position: absolute;
+}
+
+/*fin animación menú*/
+
+.menu {
+  display: flex;
+  list-style: none;
+  float: left;
+  height: 58px;
+  margin-left: 30px;
+}
+.menu a {
+  text-align: left;
+  display: block;
+  height: 50px;
+  text-decoration: none;
+  padding: 15px;
+  padding-top: 20px;
+  padding-right: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 11px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-variant-ligatures: none;
+  text-transform: uppercase;
+}
+
+.menu a:hover {
+  height: 58px;
+  border-bottom: 3px solid rgb(212, 211, 211);
+}
+
+/*Iconos redes sociales header*/
+
+.redes_sociales1 {
+  display: none;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  right: 3px;
+  height: 100%;
+  max-height: 55px;
+}
+
+.redes_sociales1 a {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  padding-right: 5px;
+}
+
+.contenedor_redes_sociales {
+  position: absolute;
+  right: 10%;
+  height: 100%;
+}
+
+.redes_sociales {
+  display: flex;
+  height: 100%;
+}
+
+.redes_sociales a,
+.redes_sociales p {
+  color: rgb(255, 255, 255);
+  padding-right: 5px;
+  padding-top: 19px;
+}
+
+.redes_sociales p {
+  display: none;
+}
+
+#iconos_redesw {
+  font-size: 18px;
+  padding-top: 17px;
+}
+
+#iconos_redesf {
+  font-size: 14px;
+}
+
+#iconos_redesg {
+  font-size: 15px;
+}
+
+#iconos_redesw:hover {
+  color: rgb(19, 204, 19);
+}
+
+#iconos_redesf:hover {
+  color: rgb(41, 95, 243);
+}
+
+#iconos_redesg:hover {
+  color: rgb(211, 37, 153);
+}
+
+/*Modo dispositivo menos a 316px*/
+@media screen and (max-width: 316px) {
+  .btn_menu .txt_btnmenu {
+    font-size: 10px;
+    margin-left: 20px;
+    margin-top: 1px;
+  }
+
+  .redes_sociales1 a {
+    font-size: 10px;
+  }
+
+  .contenedormenu {
+    width: 15px;
+    height: 20%;
+    margin-top: 3px;
+  }
+}
+
+/*Fin iconos redes sociales header*/
+
+@media screen and (max-width: 1290px) {
+  .contenedor_redes_sociales {
+    right: 1%;
+  }
+}
+
+/*para que se muestre el menu al llamar esta clase*/
+ul.show {
+  left: -0vh;
+  transition: 0.8s;
+  opacity: 100;
+}
+
+/*Menú modo dispositivo*/
+
+@media screen and (max-width: 302px) {
+  .menu {
+    min-width: 302px;
+  }
+}
+
+@media screen and (max-width: 1065px) {
+  .btn_menu {
+    display: inline-flex; /*para que el menu se muestre donde corresponde*/
+  }
+  .menu {
+    /*sale el menu desde la izquierda*/
+    opacity: 0;
+    position: fixed; /*le damos una posicion fija*/
+    flex-direction: column; /*se hacen columnas*/
+    /*background: linear-gradient(to bottom, white 95%, rgb(23, 23, 24) 5%);*/
+    background: linear-gradient(to bottom, rgb(15, 15, 15) 95%, white 5%);
+    height: calc(100% - 58px); /*el 100% por el tamaño de la barra header*/
+    top: 57px;
+    width: 75vw;
+    left: 0%;
+    left: -100vh; /*vamos a sacarla hacia arriba*/
+    transition: all 0.4s;
+    z-index: -3;
+    margin-left: 0;
+    box-shadow: 5px 5px 10px rgba(32, 32, 32, 0.308);
+    overflow-x: none;
+  }
+
+  .menu a {
+    margin-right: 10%;
+    margin-left: 5%;
+    padding: 30px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    /*color: rgb(24, 24, 26);*/
+    color: white;
+    border-bottom: 1px solid rgba(179, 179, 179, 0.664);
+    text-transform: none;
+    font-weight: 400;
+  }
+
+  .menu2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -15;
+    transition: 0.8s;
+    backdrop-filter: brightness(85%);
+  }
+
+  .menu .contacto_header {
+    border-bottom: none;
+  }
+
+  .menu .contacto_header:hover {
+    border-bottom: none;
+  }
+
+  .menu a:hover {
+    height: 50px;
+    background-color: rgba(184, 41, 41, 0);
+    border-bottom: 1px solid rgb(70, 69, 69);
+  }
+
+  .contenedor_redes_sociales {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 99.9%;
+    height: 35%;
+    /* background-color: rgb(15, 15, 15);*/
+    background-color: white;
+  }
+
+  .redes_sociales {
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 8%;
+    margin-top: 20px;
+  }
+
+  .redes_sociales a,
+  .redes_sociales p {
+    color: rgb(15, 15, 15);
+    display: flex;
+    padding: 0;
+    border-bottom: none;
+  }
+  .redes_sociales p {
+    display: block;
+    margin-left: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+      Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  #iconos_redesw {
+    padding-top: 0px;
+  }
+
+  .contenedor_redes_sociales .redes_sociales a:hover {
+    height: 50px;
+    background-color: none;
+    color: white;
+    border-bottom: none;
+  }
+
+  .redes_sociales1 {
+    display: flex;
+  }
+
+  .redes_sociales1 a {
+    text-decoration: none;
+  }
+}
+
+/*arreglar tamaño en tableta girada*/
+@media screen and (max-height: 590px) {
+  .menu {
+    overflow-y: scroll; /*que se pueda scrollear*/
+    overflow-x: hidden;
+    height: calc(100% - 58px); /*se recalcula*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .contenedor_redes_sociales {
+    position: relative;
+  }
+}

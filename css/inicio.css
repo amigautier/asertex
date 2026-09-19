@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Background fijo*/
+.backgroungfijo {
+  overflow: hidden;
+  width: 100%;
+  min-width: 270px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.backgroungfijo #imagen_backfijoasertex {
+  background-image: url(../images/backgrounds/fondo-extintores.jpg);
+}
+
+.backgroungfijo #imagen_backfijosion {
+  background-image: url(../images/backgrounds/fondo-personas.jpg);
+}
+
+.backgroungfijo_3 .imagen_backfijo_3 {
+  background-image: url(../images/backgrounds/fondo-manometro.jpg);
+}
+.backgroungfijo_4 .imagen_backfijo_4 {
+  background-image: url(../images/backgrounds/fondo-hacha.jpg);
+}
+.backgroungfijo_3 .imagen_backfijo_3,
+.backgroungfijo_4 .imagen_backfijo_4 {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-x: 50%;
+  height: 100vh;
+  width: 100%;
+  min-width: 270px;
+  max-width: 1920px;
+  margin: auto;
+}
+
+.backgroungfijo .imagen_backfijo {
+  height: 250vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position-x: 44%;
+}
+
+/*.backgroungfijo .imagen_backfijo.backfijozoom {
+  transform: scale(1.05);
+  -moz-transform: none;
+  transition: 0.8s;
+}*/
+
+.backgroungfijo .degradado_backfijo {
+  height: 250vh;
+  background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
+  transition: 0.8s;
+}
+
+.degradado_backfijo.degradadofijo {
+  background: none;
+  transition: 0.8s;
+}
+
+.txt_backfijo {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 13vh;
+}
+
+.txt_backfijo .conttxtbackfijo {
+  width: 80%;
+  text-align: center;
+  margin-top: 10%;
+}
+
+.txt_backfijo .conttxtbackfijo h2 {
+  font-family: "Arvo", serif;
+  font-size: 20px;
+  text-shadow: 3px 3px 4px rgba(27, 27, 27, 0.2);
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(148, 146, 146);
+  color: rgb(148, 146, 146);
+}
+
+.txt_backfijo .conttxtbackfijo a {
+  text-decoration: none;
+}
+
+.txt_backfijo .conttxtbackfijo h2:hover {
+  color: white;
+}
+
+.degradado_backfijo .contvacio_backfijo {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 13vh;
+  color: white;
+}
+
+/*Tipo de extintores*/
+
+.contenedor_tipo_ext {
+  width: 100%;
+  min-width: 270px;
+  background-color: rgb(16, 17, 19);
+}
+
+.tipo_ext {
+  padding: 20px;
+  color: white;
+}
+
+.titulo_tipo_ext h2 {
+  font-size: 25px;
+  text-align: center;
+  font-family: monospace;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#tipo_ext {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#tipo_ext img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+#tipo_ext p {
+  font-size: 17px;
+  font-family: "Goudy Bookletter 1911", serif;
+  letter-spacing: 2px;
+  line-height: 25px;
+  margin-bottom: 35px;
+}
+
+.tipo_a {
+  border-bottom: 2px solid rgb(6, 163, 77);
+}
+
+.tipo_b {
+  border-bottom: 2px solid rgb(252, 52, 52);
+}
+
+.tipo_c {
+  border-bottom: 2px solid rgb(43, 93, 255);
+}
+
+.tipo_K {
+  border-bottom: 2px solid rgb(221, 221, 221);
+}
+
+.tipo_K img {
+  background-color: white;
+}
+
+/*Señalización*/
+.contenedor_señalizacion {
+  width: 100%;
+  background-color: rgb(16, 17, 19);
+}
+
+.imagen_señalizacion {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+
+.imagen_señalizacion h2 {
+  font-family: monospace;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.imagen_señalizacion img {
+  width: 90%;
+  height: 100%;
+  margin-bottom: 50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*Imágen Final*/
+.contenedor_imagen_final {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(16, 17, 19);
+}
+
+.imagen_final {
+  margin-top: 40px;
+  margin-bottom: 60px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imagen_final img {
+  width: 90%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 30px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1066px) {
+  .txt_backfijo .conttxtbackfijo h2 {
+    font-size: 40px;
+  }
+
+  .titulo_tipo_ext h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  .cont_tipo {
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.411);
+    padding-bottom: 50px;
+  }
+
+  #tipo_ext {
+    width: 300px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  #tipo_ext p {
+    font-size: 18px;
+  }
+  .imagen_señalización h2 {
+    font-size: 30px;
+  }
+
+  .imagen_señalización {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .imagen_final img {
+    width: 90%;
+    height: 100%;
+  }
+}
