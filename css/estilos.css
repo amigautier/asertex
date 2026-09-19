@@ -23,6 +23,7 @@ body {
 
 body.noscroll {
   overflow: hidden;
+  height: 100vh;
 }
 
 /*Header modo dispositivo*/

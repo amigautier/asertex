@@ -1,24 +1,29 @@
-//Crea toggle para animación de botón menu
-let menu = document.getElementById("contenedormenu");
+// Manejo del clic en el menú (animación + bloqueo de scroll + fondo header)
+document.addEventListener('click', (evento) => {
+  // Verifica si el clic fue en #contenedormenu o en un hijo dentro de él
+  const botonMenu = evento.target.closest('#contenedormenu');
+  
+  if (botonMenu) {
+    // 1. Animación propia del botón (lo que hacía tu antigua myFunction)
+    botonMenu.classList.toggle('change-contenedormenu');
+    botonMenu.classList.toggle('change');
 
-function myFunction(x) {
-  menu.classList.toggle("change-contenedormenu");
-  x.classList.toggle("change");
-}
-
-//Crea toggle para dar animación al header al abrir menu
-let noscroll = document.getElementById('contenedormenu');
-const headerblack = document.getElementById('header1');
-noscroll.addEventListener('click', ()=>{
-
-   document.body.classList.toggle('noscroll'); 
-   headerblack.classList.toggle('header1black');
+    // 2. Bloqueo de scroll en body y html
+    document.body.classList.toggle('noscroll');
+    document.documentElement.classList.toggle('noscroll');
     
+    // 3. Fondo negro para el header
+    const headerblack = document.getElementById('header1');
+    if (headerblack) {
+      headerblack.classList.toggle('header1black');
+    }
+  }
 });
 
-    //Quitar flecha al  scrollear y degradado
-    window.addEventListener("scroll", function(){
-      var lineaheader = document.querySelector(".header1");
-      lineaheader.classList.toggle("header1linea",window.scrollY>5);
-
-    });
+// Quitar flecha al scrollear y degradado
+window.addEventListener('scroll', function () {
+  var lineaheader = document.querySelector('.header1');
+  if (lineaheader) {
+    lineaheader.classList.toggle('header1linea', window.scrollY > 5);
+  }
+});

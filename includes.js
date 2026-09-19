@@ -106,13 +106,3 @@ function highlightActiveLink() {
 
 
 
-// Función para calcular y establecer la altura real del viewport
-function setVhProperty() {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh', `${vh}px`);
-}
-
-window.addEventListener('load', setVhProperty);
-window.addEventListener('orientationchange', setVhProperty);
-
-
