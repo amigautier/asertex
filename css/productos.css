@@ -126,7 +126,6 @@ body.noscroll2 {
   width: 100%;
   min-width: 270px;
   height: 100%;
-  max-height: 900px;
   background-color: rgb(16, 17, 19);
   display: flex;
   flex-wrap: wrap;
@@ -210,22 +209,28 @@ body.noscroll2 {
 
 .contenedor_nive_slide {
   width: 100%;
-  height: 400px;
+  height: auto;
   margin-top: 20px;
   margin-bottom: 10px;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
-.contenedor_nive_slide::-webkit-scrollbar {
-  width: 12px;
-  background-color: rgb(172, 172, 172);
-  border-radius: 15px;
+.caja_texto_scroll {
+    max-height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 20px;
 }
 
-.contenedor_nive_slide::-webkit-scrollbar-thumb {
-  background-color: rgb(90, 90, 90);
-  border-radius: 15px;
+
+.caja_texto_scroll::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgb(172, 172, 172);
+    border-radius: 15px;
+}
+
+.caja_texto_scroll::-webkit-scrollbar-thumb {
+    background-color: rgb(90, 90, 90);
+    border-radius: 15px;
 }
 
 #nav_slide {
@@ -279,6 +284,51 @@ body.noscroll2 {
 }
 
 /*Fin de galeria de fotos*/
+
+/*Botñon whatsapp*/
+.botoncompra{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.boton_compra_producto {
+  width: 80%;
+  max-width: 550px;
+  height: 50px;
+  background-color: rgb(51, 146, 51);
+  margin-top: 20px;
+  justify-self: center;
+  transition: 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.boton_compra_producto:hover {
+  background-color: rgb(66, 190, 66);
+  transition: 0.7s;
+}
+
+.txt_cotizacion {
+  width: 80%;
+  max-width: 550px;
+  justify-self: center;
+  margin-top: 10px;
+}
+
+.txt_cotizacion p {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 13px;
+  color: rgb(253, 253, 253);
+}
 
 /*Comienzo Lightbox*/
 
@@ -415,7 +465,7 @@ button {
 
   .contenedor_nive_slide {
     width: 400px;
-    height: 500px;
+    height: auto;
   }
 
   .titulo_producto p {
