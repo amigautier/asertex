@@ -37,6 +37,12 @@ async function includeHTML(filePath, elementId) {
             console.log("Footer inyectado y fecha actualizada.");
         }
 
+        // Activar lógica del Galeria
+        if (elementId.startsWith('galeria-') && typeof initializeGalleryLogic === 'function') {
+            initializeGalleryLogic();
+            console.log(`Galería inyectada (${elementId}) y lógica activada.`);
+        }
+
     } catch (error) {
         console.error(`Error de inclusión para ${filePath}:`, error);
     }
@@ -45,6 +51,12 @@ async function includeHTML(filePath, elementId) {
 document.addEventListener('DOMContentLoaded', async () => {
     // Llamada para el Header
     await includeHTML('header.html', 'header-placeholder');
+
+    // Galeria Primeros auxilios
+    await includeHTML('galeria_primeros_auxilios.html', 'galeria-primerosauxilios-placeholder');
+    await includeHTML('galeria_extintores.html', 'galeria-extintores-placeholder');
+    await includeHTML('galeria_dotacion.html', 'galeria-dotacion-placeholder');
+    await includeHTML('galeria_elementos_proteccion.html', 'galeria-proteccion-placeholder');
 
     // Llamada para el Footer!
     await includeHTML('footer.html', 'footer-placeholder');

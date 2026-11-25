@@ -97,10 +97,8 @@
   margin-right: 20px;
 }
 
-.button-prev,
-.button-next,
-.button-prev1,
-.button-next1 {
+[class*="button-prev"],
+[class*="button-next"] {
   position: absolute;
   width: 40px;
   height: 40px;
@@ -117,20 +115,19 @@
   z-index: 2;
 }
 
-.button-prev,
-.button-prev1 {
+/* Posición izquierda para todos los "prev" */
+[class*="button-prev"] {
   left: 30px;
 }
 
-.button-next,
-.button-next1 {
+/* Posición derecha para todos los "next" */
+[class*="button-next"] {
   right: 30px;
 }
 
-.button-prev:hover,
-.button-next:hover,
-.button-prev1:hover,
-.button-next1:hover {
+/* Hover para todos */
+[class*="button-prev"]:hover,
+[class*="button-next"]:hover {
   background-color: rgb(240, 240, 240);
   color: rgb(43, 42, 42);
 }
