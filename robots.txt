@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asertex.com.co/sitemap.xml
